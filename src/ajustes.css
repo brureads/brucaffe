@@ -1,0 +1,113 @@
+
+/* BRUCAFFÉ - BOTÕES E AJUSTES */
+
+.cabecalho-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.botao-excluir-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  background: #fffdf9;
+  color: #a76e59;
+  border: 2px solid #593c35;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.botao-excluir-card:hover {
+  background: #f3a8b7;
+  color: #593c35;
+  transform: scale(1.08);
+}
+
+.botao-excluir-card:focus-visible {
+  outline: 3px solid #a76e59;
+  outline-offset: 3px;
+}
+
+.erro-pdf {
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  background: #fff0ee;
+  color: #9c3028;
+  border: 2px solid #c86d63;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.botao-pdf:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.folha-resumo {
+  overflow-wrap: anywhere;
+}
+
+.resumo-secao {
+  break-inside: avoid;
+}
+
+/* BOTÕES DO EDITOR */
+
+.acoes-cardapio {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 35px;
+}
+
+.botao-novo-resumo {
+  padding: 16px 30px;
+  background: #a76e59;
+  color: #fff;
+  border: 2px solid #593c35;
+  border-radius: 12px;
+  box-shadow: 5px 5px 0 #593c35;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.botao-novo-resumo:hover {
+  background: #90604e;
+}
+
+.botao-excluir-resumo {
+  padding: 13px 22px;
+  background: #fff0ee;
+  color: #a04444;
+  border: 2px solid #a04444;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.botao-excluir-resumo:hover {
+  background: #f7d6d3;
+}
+
+@media (max-width: 650px) {
+  .acoes-resumo {
+    flex-wrap: wrap;
+  }
+}
+
+@media print {
+  .botao-excluir-card,
+  .erro-pdf,
+  .acoes-cardapio,
+  .botao-novo-resumo,
+  .botao-excluir-resumo {
+    display: none !important;
+  }
+}

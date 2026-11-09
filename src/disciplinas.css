@@ -1,0 +1,287 @@
+
+/* BRUCAFFÉ - GERENCIAMENTO DE DISCIPLINAS */
+
+/* BOTÃO PARA CRIAR DISCIPLINA */
+
+.card-nova-materia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 260px;
+  padding: 32px;
+  background: #fff8ef;
+  color: #593c35;
+  border: 3px dashed #d987a7;
+  border-radius: 20px;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.card-nova-materia:hover {
+  background: #fffdf9;
+  border-color: #a76e59;
+  transform: translateY(-5px);
+}
+
+.icone-adicionar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  background: #f6c7d9;
+  border: 2px solid #593c35;
+  border-radius: 50%;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.card-nova-materia strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+}
+
+.card-nova-materia > span:last-child {
+  font-size: 14px;
+  color: #806b62;
+  text-align: center;
+}
+
+.mensagem-salvamento {
+  margin-top: 35px;
+  font-size: 13px;
+  color: #806b62;
+}
+
+.alerta-salvamento {
+  max-width: 700px;
+  margin: 0 auto 25px;
+  padding: 15px;
+  background: #fff0ee;
+  color: #9c3028;
+  border: 2px solid #c86d63;
+  border-radius: 12px;
+}
+
+/* FUNDO DO FORMULÁRIO */
+
+.fundo-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(53, 35, 33, 0.65);
+  overflow-y: auto;
+}
+
+/* JANELA DO FORMULÁRIO */
+
+.modal-disciplina {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  padding: 35px;
+  background: #fffdf9;
+  color: #593c35;
+  border: 3px solid #593c35;
+  border-radius: 22px;
+  box-shadow: 9px 9px 0 #d987a7;
+  text-align: left;
+}
+
+.fechar-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  border: none;
+  background: transparent;
+  color: #593c35;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.modal-etiqueta {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 7px 12px;
+  background: #f6c7d9;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.modal-disciplina h2 {
+  margin: 8px 0 10px;
+  font-size: 34px;
+}
+
+.modal-disciplina > p {
+  margin-bottom: 28px;
+  color: #806b62;
+  line-height: 1.6;
+}
+
+/* CAMPOS */
+
+.formulario-disciplina {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formulario-disciplina label {
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.formulario-disciplina input,
+.formulario-disciplina textarea,
+.formulario-disciplina select {
+  width: 100%;
+  padding: 13px 15px;
+  background: #fff8ef;
+  color: #593c35;
+  border: 2px solid #d9b6a6;
+  border-radius: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  outline: none;
+}
+
+.formulario-disciplina input:focus,
+.formulario-disciplina textarea:focus,
+.formulario-disciplina select:focus {
+  border-color: #d987a7;
+  box-shadow: 0 0 0 3px #f6c7d9;
+}
+
+.formulario-disciplina textarea {
+  resize: vertical;
+  min-height: 85px;
+}
+
+/* PRÉVIA DO CARTÃO */
+
+.preview-disciplina {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 16px;
+  padding: 22px;
+  border: 2px solid #593c35;
+  border-radius: 14px;
+  box-shadow: 4px 4px 0 #593c35;
+}
+
+.preview-disciplina.rosa {
+  background: #f6c7d9;
+}
+
+.preview-disciplina.caramelo {
+  background: #e8d0b8;
+}
+
+.preview-disciplina.lilas {
+  background: #e7d8f5;
+}
+
+.preview-disciplina.verde {
+  background: #d6e8d0;
+}
+
+.preview-disciplina > span {
+  font-size: 30px;
+}
+
+.preview-disciplina strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  overflow-wrap: anywhere;
+}
+
+.preview-disciplina small {
+  font-size: 13px;
+  color: #73594e;
+  overflow-wrap: anywhere;
+}
+
+/* BOTÕES DO FORMULÁRIO */
+
+.botoes-formulario {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.cancelar-disciplina,
+.salvar-disciplina {
+  padding: 13px 19px;
+  border: 2px solid #593c35;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cancelar-disciplina {
+  background: #fffdf9;
+  color: #593c35;
+}
+
+.salvar-disciplina {
+  background: #d987a7;
+  color: #fff;
+}
+
+.salvar-disciplina:hover {
+  background: #c67596;
+}
+
+.salvar-disciplina:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* CELULARES */
+
+@media (max-width: 650px) {
+  .modal-disciplina {
+    padding: 25px 20px;
+  }
+
+  .modal-disciplina h2 {
+    font-size: 28px;
+  }
+
+  .botoes-formulario {
+    flex-direction: column;
+  }
+
+  .cancelar-disciplina,
+  .salvar-disciplina {
+    width: 100%;
+  }
+}
+
+/* NÃO IMPRIMIR FORMULÁRIOS */
+
+@media print {
+  .fundo-modal,
+  .card-nova-materia,
+  .mensagem-salvamento,
+  .alerta-salvamento {
+    display: none !important;
+  }
+}

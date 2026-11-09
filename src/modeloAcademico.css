@@ -1,0 +1,144 @@
+
+/* BRUCAFFÉ - MODELO ACADÊMICO */
+
+.documento-academico {
+  width: 100%;
+  max-width: 210mm;
+  margin: 0 auto;
+  padding: 22mm 20mm;
+
+  background: #ffffff;
+  color: #111111;
+
+  font-family: Arial, sans-serif;
+  font-size: 11pt;
+  line-height: 1.5;
+
+  box-sizing: border-box;
+}
+
+/* CABEÇALHO INSTITUCIONAL */
+
+.documento-cabecalho {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  padding-bottom: 15px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.documento-instituicao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.documento-instituicao strong {
+  font-family: Arial, sans-serif;
+  font-size: 28pt;
+  font-weight: 700;
+  color: #222222;
+  letter-spacing: 2px;
+}
+
+.documento-instituicao span {
+  font-size: 10pt;
+  margin-top: 4px;
+}
+
+.documento-informacoes p {
+  margin: 3px 0;
+  font-size: 10pt;
+}
+
+/* TÍTULO */
+
+.documento-titulo {
+  text-align: center;
+  margin: 35px 0;
+}
+
+.documento-titulo h1 {
+  font-family: Arial, sans-serif;
+  font-size: 16pt;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #111111;
+  margin: 0 0 12px;
+}
+
+.documento-titulo p {
+  font-size: 11pt;
+  color: #444444;
+  margin: 0;
+}
+
+/* CONTEÚDO */
+
+.documento-conteudo {
+  text-align: left;
+}
+
+.documento-secao {
+  margin-bottom: 24px;
+  break-inside: avoid;
+}
+
+.documento-secao h2 {
+  font-family: Arial, sans-serif;
+  font-size: 12pt;
+  font-weight: 700;
+  color: #111111;
+
+  margin: 0 0 12px;
+
+  break-after: avoid;
+}
+
+.documento-secao p {
+  margin: 0;
+  text-align: justify;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+  line-height: 1.6;
+}
+
+/* VISUALIZAÇÃO NO NAVEGADOR */
+
+@media screen {
+  .documento-academico {
+    min-height: 297mm;
+    border: 1px solid #dddddd;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  }
+}
+
+/* IMPRESSÃO */
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  .documento-academico {
+    width: 100%;
+    max-width: none;
+    min-height: 0;
+    margin: 0;
+    padding: 20mm;
+
+    border: none;
+    box-shadow: none;
+  }
+
+  .documento-secao {
+    break-inside: auto;
+  }
+
+  .documento-secao h2 {
+    break-after: avoid;
+  }
+}

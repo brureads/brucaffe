@@ -1,0 +1,51 @@
+
+/* BRUCAFFÉ - BOTÕES DO EDITOR */
+
+.acoes-cardapio {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 35px;
+}
+
+.botao-novo-resumo {
+  padding: 16px 30px;
+  background: #a76e59;
+  color: #fff;
+  border: 2px solid #593c35;
+  border-radius: 12px;
+  box-shadow: 5px 5px 0 #593c35;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.botao-novo-resumo:hover {
+  background: #90604e;
+}
+
+.botao-excluir-resumo {
+  padding: 13px 22px;
+  background: #fff0ee;
+  color: #a04444;
+  border: 2px solid #a04444;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.botao-excluir-resumo:hover {
+  background: #f7d6d3;
+}
+
+@media (max-width: 650px) {
+  .acoes-resumo {
+    flex-wrap: wrap;
+  }
+}
+
+@media print {
+  .acoes-cardapio,
+  .botao-novo-resumo,
+  .botao-excluir-resumo {
+    display: none !important;
+  }
+}

@@ -1,0 +1,136 @@
+
+/* BRUCAFFÉ - INTEGRAÇÃO DO MODELO ACADÊMICO */
+
+/* ÁREA DE LEITURA */
+
+.pagina-academica {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 45px 24px 90px;
+}
+
+/* CONTROLES DO LEITOR */
+
+.controles-academicos {
+  max-width: 850px;
+  margin: 0 auto 30px;
+}
+
+.controles-academicos .botao-voltar {
+  margin-bottom: 20px;
+}
+
+.controles-academicos .acoes-resumo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ÁREA EXPORTADA PARA PDF */
+
+.documento-exportacao {
+  width: 100%;
+  max-width: 210mm;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+.documento-exportacao .documento-academico {
+  width: 100%;
+  margin: 0;
+}
+
+/* MELHORIAS PARA TELAS PEQUENAS */
+
+@media screen and (max-width: 650px) {
+  .pagina-academica {
+    padding: 25px 12px 60px;
+  }
+
+  .controles-academicos .acoes-resumo {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .controles-academicos .acoes-resumo button {
+    padding: 12px 8px;
+    font-size: 12px;
+  }
+
+  .documento-exportacao .documento-academico {
+    min-height: 0;
+    padding: 25px 18px;
+  }
+
+  .documento-instituicao strong {
+    font-size: 23pt;
+  }
+
+  .documento-titulo h1 {
+    font-size: 15pt;
+  }
+}
+
+/* IMPRESSÃO EM A4 */
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body,
+  #root,
+  .brucaffe {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+  }
+
+  .cabecalho,
+  .controles-academicos,
+  .backup-area,
+  footer {
+    display: none !important;
+  }
+
+  .pagina-academica {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .documento-exportacao {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .documento-exportacao .documento-academico {
+    width: 100%;
+    max-width: none;
+    min-height: 0;
+    margin: 0;
+    padding: 18mm 20mm;
+
+    border: none;
+    box-shadow: none;
+
+    background: #ffffff;
+    color: #111111;
+  }
+
+  .documento-secao {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .documento-secao h2 {
+    break-after: avoid;
+  }
+}

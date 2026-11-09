@@ -9,34 +9,18 @@ type Props = {
 
 function ModeloAcademico({
   resumo,
-  disciplina,
 }: Props) {
   return (
     <article className="documento-academico">
-      {/* CABEÇALHO INSTITUCIONAL */}
+
+      {/* LOGOTIPO INSTITUCIONAL */}
 
       <header className="documento-cabecalho">
-        <div className="documento-instituicao">
-          <img
-            src="/imagens/logo-ceub.png"
-            alt="Logotipo do CEUB"
-            className="documento-logo"
-          />
-
-          <span>
-            Centro Universitário de Brasília
-          </span>
-        </div>
-
-        <div className="documento-informacoes">
-          <p>
-            <strong>Curso:</strong> Ciência da Computação
-          </p>
-
-          <p>
-            <strong>Disciplina:</strong> {disciplina}
-          </p>
-        </div>
+        <img
+          src="/imagens/logo-ceub.png"
+          alt="Logotipo do CEUB"
+          className="documento-logo"
+        />
       </header>
 
       {/* TÍTULO DO RESUMO */}
@@ -49,7 +33,7 @@ function ModeloAcademico({
         )}
       </div>
 
-      {/* CONTEÚDO */}
+      {/* CONTEÚDO DO RESUMO */}
 
       <div className="documento-conteudo">
         {resumo.conteudo.map((secao, indice) => (
@@ -65,6 +49,7 @@ function ModeloAcademico({
           </section>
         ))}
       </div>
+
     </article>
   )
 }

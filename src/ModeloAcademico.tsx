@@ -13,17 +13,33 @@ function ModeloAcademico({
 }: Props) {
   return (
     <article className="documento-academico">
+      {/* CABEÇALHO INSTITUCIONAL */}
+
       <header className="documento-cabecalho">
         <div className="documento-instituicao">
-          <strong>CEUB</strong>
-          <span>Centro Universitário de Brasília</span>
+          <img
+            src="/imagens/logo-ceub.png"
+            alt="Logotipo do CEUB"
+            className="documento-logo"
+          />
+
+          <span>
+            Centro Universitário de Brasília
+          </span>
         </div>
 
         <div className="documento-informacoes">
-          <p>Curso: Ciência da Computação</p>
-          <p>Disciplina: {disciplina}</p>
+          <p>
+            <strong>Curso:</strong> Ciência da Computação
+          </p>
+
+          <p>
+            <strong>Disciplina:</strong> {disciplina}
+          </p>
         </div>
       </header>
+
+      {/* TÍTULO DO RESUMO */}
 
       <div className="documento-titulo">
         <h1>{resumo.titulo}</h1>
@@ -32,6 +48,8 @@ function ModeloAcademico({
           <p>{resumo.descricao}</p>
         )}
       </div>
+
+      {/* CONTEÚDO */}
 
       <div className="documento-conteudo">
         {resumo.conteudo.map((secao, indice) => (
